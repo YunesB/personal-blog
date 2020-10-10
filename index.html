@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./pages/index.css">
+    <link rel="stylesheet" href="./vendor/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Spectral+SC:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+    <title>Anne Sweet</title>
+</head>
+<body>
+  <div class="page">
+      <header class="header" id="header">
+          <img src="images/logo.svg" class="header__logo">
+          <nav class="header__navigation">
+              <ul class="header__links">
+                  <li class="header__list-item"><a href="./second-page.html" class="header__link">Статьи</a></li>
+                  <li class="header__list-item"><a href="#about-me" class="header__link">Обо мне</a></li>
+                  <li class="header__list-item"><a href="#portfolio" class="header__link">Портфолио</a></li>
+                  <li class="header__list-item"><a href="#contact" class="header__link">Написать мне</a></li>
+              </ul>
+          </nav>
+      </header>
+      <main class="content">
+          <section class="articles" id="articles">
+            <div class="articles__container-heading">
+              <h2 class="articles__section-heading">Все статьи</h2>
+              <select name="articles__select" class="articles__dropdown">
+                <option value="" disabled selected hidden>Выбрать тему</option>
+                <option value="">Без фильтра</option>
+                <option value="travel">Путешествия</option>
+                <option value="cafe">Места</option>
+                <option value="books">Книги</option>
+                <option value="photos">Фото</option>
+                <option value="cooking">Кулинария</option>
+              </select>
+            </div>
+            <div class="articles__container-cards">
+              <ul class="cards">
+                  <li class="cards__item" data-tags="travel">
+                    <img src="./images/cards/street.jpg" alt="улица" class="cards__image">
+                    <h3 class="cards__heading">Путешествие в Берлин в августе</h3>
+                    <p class="cards__paragraph">Летний месяц я провела в столице Германии вместе с друзьями. И вот как это было!</p>
+                    <div class="cards__item-container">
+                        <p class="cards__tags">Теги: путешествия</p>
+                        <p class="cards__date"><time>29.09.2020</time></p>
+                    </div>
+                  </li>
+                  <li class="cards__item" data-tags="cafe">
+                    <img src="./images/cards/drinks.jpg" alt="напитки" class="cards__image">
+                    <h3 class="cards__heading">Где выпить колдбрю в Москве</h3>
+                    <p class="cards__paragraph">Собрала для вас список любимых кофеен, где подают лучший летний напиток.</p>
+                    <div class="cards__item-container">
+                        <p class="cards__tags">Теги: город</p>
+                        <p class="cards__date"><time>24.07.2020</time></p>
+                    </div>
+                  </li>
+                  <li class="cards__item" data-tags="books">
+                    <img src="./images/cards/books.jpg" alt="книги" class="cards__image">
+                    <h3 class="cards__heading">Прочитано: книжные рекомендации</h3>
+                    <p class="cards__paragraph">Рассказываю о прочитанных за последнее время книгах: фавориты и провалы.</p>
+                    <div class="cards__item-container">
+                        <p class="cards__tags">Теги: книги</p>
+                        <p class="cards__date"><time>15.07.2020</time></p>
+                    </div>
+                  </li>
+              </ul>
+              <ul class="img-cards">
+                  <li class="img-cards__item img-cards__item_data_flowers" data-tags="photos">
+                    <div class="img-cards__box">
+                      <h3 class="img-cards__heading">Снимки на плёнку</h3>
+                      <p class="img-cards__paragraph">Поделилась с вами весенними фотографиями, и секретами удачных снимков.</p>
+                      <div class="img-cards__item-container">
+                        <p class="img-cards__tags">Теги: фотографии</p>
+                        <p class="img-cards__date"><time>29.06.2020</time></p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="img-cards__item img-cards__item_data_cake" data-tags="cooking">
+                    <div class="img-cards__box">
+                      <h3 class="img-cards__heading">Домашний чизкейк</h3>
+                      <p class="img-cards__paragraph">Что может быть лучше чизкейка с сезонными ягодами? Только домашний чизкейк!</p>
+                      <div class="img-cards__item-container">
+                        <p class="img-cards__tags">Теги: рецепты</p>
+                        <p class="img-cards__date"><time>24.06.2020</time></p>
+                      </div>
+                    </div>
+                  </li>
+              </ul>
+            </div>
+            <button type="button" class="articles__button">ПОКАЗАТЬ ЕЩЁ</button>
+          </section>
+          <section class="about-me" id="about-me">
+              <h2 class="about-me__section-heading">Обо мне</h2>
+              <div class="about-me__container">
+                  <img src="./images/about_me.jpg" alt="фотография" class="about-me__image" id="openPopup">
+                  <div class="about-me__text">
+                    <p class="about-me__paragraph">
+                        Всем привет! Меня зовут Аня, и это мой личный блог.
+                        Здесь ты найдёшь рассказы о моих путешествиях, снимки
+                        на плёнку, рецепты, обзоры на книги. В общем, тексты о том,
+                        что мне инетресно.
+                    </p>
+                    <p class="about-me__paragraph">
+                        Я работаю копирайтером, поэтому мой блоге — это ещё и моё
+                        портфолио. Ниже размещены несколько моих лучших
+                        рабочих текстов. Буду рада новым сотрудничествам!
+                    </p>
+                    <p class="about-me__paragraph">
+                        Если вы хотите написать мне — это можно сделать в соцсетях или через форму. Всегда приятно услышать обратную связь от читателей и познакомиться поближе.
+                    </p>
+                    <p class="about-me__paragraph">
+                        Приятного чтения!
+                    </p>
+                    <blockquote class="about-me__quote">
+                        Я верю, что каждый раз пробуя новое,
+                        выходящее за зону моего комфорта,
+                        я действительно узнаю настояющую
+                        себя. 
+                    </blockquote>
+                  </div>
+              </div>
+          </section>
+          <section class="portfolio" id="portfolio">
+            <h2 class="porfolio__section-heading">Портфолио</h2>
+            <ul class="portfolio__cards">
+                <li class="portfolio__card portfolio__card_data_html">
+                  <div class="portfolio__card-box">
+                    <h3 class="portfoilio__card-title">Блог HTML Academy</h3>
+                    <p class="portfolio__card-subtitle">«Как учиться продуктивно»</p>
+                    <p class="portfolio__card-paragraph">
+                        Про основные методы обучения,
+                        которые помогут быстро и надолго
+                        запомнить информацию.
+                    </p>
+                  </div>
+                </li>
+                <li class="portfolio__card portfolio__card_data_lnk">
+                    <div class="portfolio__card-box">
+                      <h3 class="portfoilio__card-title">Журнал «LNK»</h3>
+                      <p class="portfolio__card-subtitle">«Зачем поцели нужны человеку?
+                        И какие они бывают»</p>
+                      <p class="portfolio__card-paragraph">
+                            Поцелуи — повсеместная ежедневная
+                            практика. Но зачем люди целуются?
+                            Какие смысли вкладывают в этот ритуал?
+                            И где корни этой практики?
+                      </p>
+                    </div>
+                </li>
+                <li class="portfolio__card portfolio__card_data_t-l">
+                    <div class="portfolio__card-box">
+                      <h3 class="portfoilio__card-title">Журнал «Т — Л»</h3>
+                      <p class="portfolio__card-subtitle">«Советы по эффективной удалённой работе»</p>
+                      <p class="portfolio__card-paragraph">
+                        Поделилась лайфхаками, которые помогают
+                        мне работать продуктивно из дома. 
+                      </p>
+                    </div>
+                </li>
+            </ul>
+            <button type="button" class="portfolio__button">ПОКАЗАТЬ ЕЩЁ</button>
+          </section>
+          <section class="contact" id="contact">
+            <h2 class="contact__section-heading">Написать мне</h2>
+            <form class="contact__form" novalidate>
+              <div class="contact__form-box">
+                <label class="contact__label contact__label_style_margin">Ваше имя
+                    <input type="text" class="contact__input"
+                    placeholder = "Иван Иванов"
+                    minlength="2" maxlength="30" required
+                    id="name-input">
+                    <span class="contact__error" id="name-input-error"></span>
+                </label>
+                <label class="contact__label">Email
+                    <input type="email" class="contact__input"
+                    placeholder = "google@gmail.com"
+                    minlength="7" maxlength="30" required
+                    id="email-input">
+                    <span class="contact__error" id="email-input-error"></span>
+                </label>
+              </div>
+                <label class="contact__label">Сообщение
+                    <textarea class="contact__input contact__input_type_textarea"
+                    placeholder = "Напишите здесь Ваше сообщение."
+                    minlength="2" maxlength="200" required
+                    id="text-input"></textarea>
+                    <span class="contact__error" id="text-input-error"></span>
+                </label>
+                <button type="submit" class="contact__button">ОТПРАВИТЬ</button>
+                <span class="contact__submit-message"></span>
+            </form>
+          </section>
+      </main>
+      <footer class="footer">
+        <ul class="footer__links">
+            <li class="footer__link-item">
+                <a href="" class="footer__link">ВК</a>
+            </li>
+            <li class="footer__link-item">
+                <a href="" class="footer__link">Телеграм</a>
+            </li>
+            <li class="footer__link-item">
+                <a href="" class="footer__link">Инстаграм</a>
+            </li>
+            <li class="footer__link-item">
+                <a href="" class="footer__link">Твиттер</a>
+            </li>
+        </ul>
+      </footer>
+      <div class="popup" id="popup">
+        <div class="popup__container">
+          <img src="" alt="" id="popupImg" class="popup__image">
+        </div>
+      </div>
+      <a href="#header" class="page__button">Наверх</a>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="./scripts/index.js"></script>
+  <script src="./scripts/scroll.js"></script>
+</body>
+</html>
